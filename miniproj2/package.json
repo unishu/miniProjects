@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "11oct22-mini-proj-2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastian-Webster/11oct22-mini-proj-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastian-Webster/11oct22-mini-proj-2/issues"
+  },
+  "homepage": "https://github.com/Sebastian-Webster/11oct22-mini-proj-2#readme",
+  "devDependencies": {},
+  "description": ""
+}

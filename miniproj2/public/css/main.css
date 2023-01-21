@@ -1,0 +1,93 @@
+body {
+  --color-primary: green;
+  --color-primary-dark: #007f67;
+  --color-secondary: rgb(27, 27, 235);
+  --color-error: red;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+    
+  margin: 0;
+  height: 100vh;
+  font-size: 15px;
+  background-image: url("/Marlanda/miniproj2/public/bgpic.jpg");
+}
+    
+.container { 
+  min-width: 60%;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: rgb(32, 31, 31);
+  border: 1px solid;
+  color: whitesmoke;
+ 
+}
+
+.con1 {
+  margin-top: 30px;
+}
+
+.registerBtn {
+  margin-right: 25px;
+}
+    
+.form > *:first-child {
+  margin-top: 0;
+}
+    
+.form > *:last-child {
+  margin-bottom: 0;
+}
+    
+.form-control:focus {
+  border-color: var(--color-primary);
+}
+    
+    
+.formLink {
+  color: var(--color-secondary);
+  text-decoration: none;
+  cursor: pointer; 
+}
+    
+.formLink:hover {
+  text-decoration: underline;
+}
+    
+    
+.form-control--error {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+    
+.form-group_errorMsg {
+  color: var(--color-error);
+}
+    
+.formButton:active {
+  color: var(--color-primary-dark)
+}
+
+/*.alert-box{
+  position: absolute;
+  top: -100% ;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  text-transform: capitalize;
+  background: rgb(255, 119, 119);
+  border-top: 10px solid rgb(255, 37, 37);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff;
+  font-family: 'roboto', sans-serif;
+  text-align: center;
+  transition: 1s;
+  }
+  */
+
+  

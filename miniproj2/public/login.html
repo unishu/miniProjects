@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login form</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand me-4" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link me-3" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Careers</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" id="signIn">
+                        <a class="nav-link active me-3 bg-primary" id="login-btn" href="/login">Sign in</a>
+                    </li>
+                    <li class="nav-item" id="signUp">
+                        <a class="nav-link active me-4" id="register-btn" href="/register">Sign up</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+    </div>
+                      
+<!--LOGIN FORM-->
+
+    <div class="container">
+        <form class="form-group needs-validation" id="login" action="http://localhost:3000" method="post">
+            <h1 class="formHeader form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-4 mb-2 text-center">Login</h1>
+            <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-4 mt-5 mb-4">
+                <select class="form-select form-select-sm" >
+                    <option value="">Select a Language</option>
+                    <option value="English">English</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Spanish">Spanish</option>
+                </select>                   
+            </div>
+            <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mb-3">
+                <label for="username" class="form-label ">Username</label>
+                <input type="text" class="form-control username" autofocus placeholder="Username" id="username" name="username" pattern="(?=.*[a-zA-Z0-9])[a-zA-Z].{5,}" required>
+            </div>
+            <div class="form-group col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3  mb-3">
+                <label for="password" class="form-label ">Password</label>
+                <input type="password" class="form-control password" autofocus placeholder="Password" id="password" name="password" 
+                pattern='(?=.*\d)(?=.*[a-zA-Z])(?=.*[`!@#$%^&*()_+\-=\[\]{};:|,.>/?~])[a-zA-Z].{5,}' 
+                title= "Must start with a letter and contain at least one number and one special character, and at least 8 or more characters"  required>
+            </div>
+            <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mb-4 text-center" required>
+                Subscribe to updates:
+                <div class="form-check form-check-inline ms-4">           
+                    <input class="form-check-input" type="radio" id="yesRadio" name="chooseUpdate" >
+                    <label class="form-check-label" for="yesRadio"><small>Yes</small></label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="noRadio" name="chooseUpdate" >
+                    <label class="form-check-label" for="noRadio"><small>No</small></label>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="formButton col-sm-8 offset-sm-0 col-md-8 offset-md-0 col-lg-6 offset-lg-0 mb-2 btn btn-primary btn-md" id ="loginSubmit" type="submit">Sign In</button>
+            </div>
+            <div class="form-check text-center mb-4">
+                <label class="form-check-label" for="rmbcheck"><input type="checkbox" class="form-check-input" id="rmbcheck">Remember me</label>
+            </div>
+            <p class="formText col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-4 text-center mb-1">
+                <a href="#" class="formLink">Forgot your password?</a>
+            </p>
+            <p class="formText col-sm-10 offset-sm-1 col-md-10 offset-md-2 col-lg-6 offset-lg-3 text-center mb-4">
+                <a href="/register" class="formLink" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+            <div class="invalid-feedback needs-validation">Login details incorrect. Please try again.</div>
+        </form>  
+    </div>
+
+
+<script src="js/form.js"></script>
+
+</body>
+</html>
