@@ -1,0 +1,55 @@
+version: "4"
+services:
+
+  mongo:
+    container_name: mongodb_container
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    depends_on:
+      - mongo
+    build: ./backend
+    container_name: backend_c
+    restart: unless-stopped
+    ports: 
+      - "8080:8080"
+      - '5000:5000'
+    expose:
+      - 5000
+    command: "npm install"
+    volumes: 
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      API_PORT: 5000
+      MONGO_URI: mongodb+srv://mmar:petbook123@cluster0.1tqfanm.mongodb.net/PetBook?retryWrites=true&w=majority
+      DB_NAME: PETAPP
+
+  frontend: 
+    depends_on:
+      - backend
+      - mongo
+    build: ./frontend
+    container_name: frontend_c
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    command: npm start
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongo-data:
+    driver: local
+   
+    
+
+

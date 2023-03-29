@@ -1,0 +1,12 @@
+.navbar-brand {
+    color: rgb(64, 64, 160);
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  
+  .nav-link:hover {
+    color: black;
+    font-weight: bold;
+  }
+
+ 
